@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="refresh" content="3600" />
+        <title><?php echo $this->title ?></title>
+        <link href="/css/style.css" rel="stylesheet">
+        <link href="/css/blitzer/jquery-ui-1.8.14.custom.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img src="/images/logo_shop_ru.gif" alt="Юник-Трейд" style="float: left">
+            <div id="slogan">Юник Трейд. Взаимное превосходство.</div>
+        </header>
+        <h1><?php echo $this->report_name ?></h1>
+        <nav>
+            <div style="margin-bottom: 15px">
+<?php foreach($this->top_menu as $item) : ?>
+                <a href="?command=<?php echo $item['command'] ?>"><?php echo $item['title'] ?></a>
+<?php endforeach; ?>
+            </div>
+            <a href="javascript:print()" id="print">
+                Отправить на печать
+            </a>
+        </nav>
+        <article>
+<?php echo $this->report ?>
+        </article>
+        <footer>
+            ЧПФ "Юникс-Трейд" 2012
+        </footer>
+    </body>
+</html>

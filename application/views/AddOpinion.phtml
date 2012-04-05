@@ -1,0 +1,14 @@
+<p class="error"><?php if(isset($this->message)) echo $this->message; ?></p>
+<form action="AddOpinion.php" method="post">
+    <input type="hidden" name="submitted" value="yes" />
+    <p>Заголовок: <input type="text" name="title" /></p>
+    <p>Тип думки:
+        <input type="radio" name="type" value="-1" /> - Негативна
+        <input type="radio" name="type" value="0" /> - Нейтральна
+        <input type="radio" name="type" value="1" /> - Позитивна
+    </p>
+    <p>Ваше ім’я: <input type="text" name="name" /></p>
+    <p>Електронна адреса: <input type="email" name="email" /></p>
+    <p>Текст думки: <textarea name="text"></textarea></p>
+    <p><button type="submit">Відправити</button></p>
+</form>
